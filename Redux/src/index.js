@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux'; 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+import ToolkitApp from './toolkitApp'
+import registerServiceWorker from './registerServiceWorker';
+import { setupStore } from './store/toolkitStore';
+
+const store = setupStore();
+
+ReactDOM.render(<Provider store={store}><ToolkitApp/></Provider>, document.getElementById('root'));
 registerServiceWorker();
