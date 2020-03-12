@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
+// https://qiita.com/mpyw/items/a816c6380219b1d5a3bf
+// vanilla redux
+
+// how can I write async transaction?
+// => redux-saga
+// https://qiita.com/kuy/items/716affc808ebb3e1e8ac
+
 class Counter extends Component {
     counterChangedHandler = ( action, value ) => {
         // eslint-disable-next-line default-case

@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 import toolkitModule from "./toolkitModule";
 
+// ここで他のredusersをつなげてrootReducerを作る
 const rootReducer = combineReducers({
     counter: toolkitModule.reducer
 });

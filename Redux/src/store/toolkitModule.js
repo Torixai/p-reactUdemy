@@ -18,6 +18,9 @@ const toolkitModule = createSlice({
         },
         onSubtractFive: (state,action) => {
             return state - 5
+        },
+        onAddNum: (state,action) => {
+            return state + action.payload
         }
     }
     // if you need you can define
@@ -27,5 +30,15 @@ const toolkitModule = createSlice({
     //     }
     // }
 })
+
+
+// async by thunk
+// https://www.hypertextcandy.com/learn-react-redux-with-hooks-and-redux-starter-kit
+export const asyncIncrement = () => dispatch => {
+    setTimeout(() => {
+        const value = 15;
+        dispatch(toolkitModule.actions.onAddNum(value));
+    }, 2000);
+};
 
 export default toolkitModule;
